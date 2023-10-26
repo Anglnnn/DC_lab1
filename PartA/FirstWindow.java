@@ -125,19 +125,16 @@ public class FirstWindow extends JFrame implements Runnable {
     public class FirstWindowWindowListener extends WindowAdapter {
         @Override
         public void windowClosing(WindowEvent e) {
-            // Interrupt the threads.
             thread1.interrupt();
             thread2.interrupt();
 
-            // Wait for the threads to terminate.
             try {
                 thread1.join();
                 thread2.join();
             } catch (InterruptedException e1) {
-                // Do something to handle the exception.
             }
 
-            // Close the window.
+
             e.getWindow().dispose();
         }
     }

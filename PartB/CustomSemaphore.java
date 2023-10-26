@@ -1,10 +1,10 @@
 package PartB;
 
 public class CustomSemaphore {
-    private volatile int semaphore; // 1 is free
+    private volatile int semaphore; 
 
     public CustomSemaphore() {
-        this.semaphore = 1; // free by default
+        this.semaphore = 1; 
     }
 
     public void lock() {
